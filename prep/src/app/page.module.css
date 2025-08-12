@@ -1,0 +1,666 @@
+/* page.module.css */
+
+.mainContainer {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  color: #e2e8f0;
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.85)),
+    url('/images/background-pattern.png') center/cover no-repeat fixed; /* Replace with your background image */
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+  max-width: 900px;
+  width: 90%;
+  margin: auto;
+}
+
+.title {
+  font-size: 4rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 4px 15px rgba(96, 165, 250, 0.3);
+  margin: 0;
+  margin-bottom: 1.5rem;
+}
+
+.description {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  max-width: 700px;
+  color: #a0aec0;
+  margin-bottom: 3rem;
+}
+
+.getStartedButton {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  border-radius: 30px;
+  border: none;
+  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.getStartedButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(59, 130, 246, 0.6);
+}
+
+.footer {
+  text-align: center;
+  padding: 1rem;
+  color: #64748b;
+  font-size: 0.85rem;
+  margin-top: auto;
+  width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .title {
+    font-size: 3rem;
+  }
+  .description {
+    font-size: 1rem;
+  }
+  .getStartedButton {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+  }
+}
+
+
+
+
+/* login and signup page */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('logo.png') no-repeat center center/cover;
+  background-attachment: fixed;
+  color: #f0f0f0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+ }
+ 
+
+ .formCard {
+  background: rgba(10, 10, 20, 0.3);
+  padding: 2.5rem;
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  max-width: 450px;
+  max-height: 90vh;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+ }
+ 
+
+ .title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #8be9fd;
+  letter-spacing: 2px;
+ }
+ 
+
+ .formGroup {
+  margin-bottom: 1.5rem;
+ }
+ 
+
+ .label {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 0.6rem;
+  font-weight: 500;
+  color: #a0a0a0;
+ }
+ 
+
+ .input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #f0f0f0;
+  border-radius: 10px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+ }
+ 
+
+ .input:focus {
+  outline: none;
+  border-color: #8be9fd;
+  box-shadow: 0 0 0 2px rgba(139, 233, 253, 0.3);
+ }
+ 
+
+ .button {
+  width: 100%;
+  padding: 1rem;
+  background-color: #6272a4;
+  color: #f8f8f2;
+  font-weight: bold;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 20px rgba(98, 114, 164, 0.2);
+ }
+ 
+
+ .button:hover {
+  transform: translateY(-3px);
+  background-color: #444b5a;
+  box-shadow: 0 8px 25px rgba(98, 114, 164, 0.3);
+ }
+ 
+
+ .errorMessage {
+  color: #ff5555;
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+ }
+ 
+
+ .switchLink {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  color: #a0a0a0;
+ }
+ 
+
+ .linkText {
+  color: #8be9fd;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+ }
+ 
+
+ .linkText:hover {
+  text-decoration: underline;
+  color: #6272a4;
+ }
+
+ /* login and signup page end  */
+
+
+ /* page.module.css */
+
+.appContainer {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg,#161b22 0%,#16192b 100%);
+}
+
+.header {
+  background: rgba(26, 32, 46, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1.2rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+  -webkit-font-smoothing: antialiased;
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.username {
+  font-weight: 500;
+  color: #e2e8f0;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  background: rgba(30, 41, 59, 0.8);
+  border-radius: 25px;
+  border: 1px solid rgba(96, 165, 250, 0.3);
+}
+
+.hamburgerMenu {
+  position: relative;
+}
+
+.hamburgerButton {
+  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+  border: none;
+  cursor: pointer;
+  padding: 0.7rem;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+}
+
+.hamburgerButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+}
+
+.hamburgerIcon {
+  width: 22px;
+  height: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.hamburgerLine {
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  transition: 0.3s;
+  border-radius: 2px;
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  right: 0;
+  background: rgba(30, 41, 59, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  min-width: 150px;
+  z-index: 1000;
+  display: none;
+  border: 1px solid rgba(96, 165, 250, 0.2);
+  animation: slideDown 0.3s ease-out;
+}
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.show {
+  display: block;
+}
+
+.logoutButton {
+  width: 100%;
+  padding: 0.85rem 1.2rem;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  color: #e53e3e;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  border-radius: 8px;
+  margin: 0.3rem;
+  font-size: 0.95rem;
+}
+
+.logoutButton:hover {
+  background: linear-gradient(135deg, #fed7d7 0%, #feb2b2 100%);
+  transform: translateX(5px);
+}
+
+.mainContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.pageTitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 3rem;
+  text-align: center;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* This is the key change for the two-column layout */
+.mainContentGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  width: 100%;
+  align-items: stretch;
+  flex: 1;
+}
+
+.uploadSection {
+  background: rgba(30, 41, 59, 0.95);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 3rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  border: 2px dashed rgba(96, 165, 250, 0.3);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.pdfSection::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(96, 165, 250, 0.1) 0%, transparent 70%);
+  transform: scale(0);
+  transition: transform 0.6s ease;
+}
+
+.pdfSection:hover::before {
+  transform: scale(1);
+}
+
+.pdfSection:hover {
+  border-color: #60a5fa;
+  transform: translateY(-5px);
+  box-shadow: 0 25px 50px rgba(96, 165, 250, 0.3);
+}
+
+.pdfUploadArea {
+  text-align: center;
+  padding: 3rem 2rem;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.uploadIcon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1.5rem;
+  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: white;
+  box-shadow: 0 10px 25px rgba(59, 130, 246, 0.4);
+  animation: float 6s ease-in-out infinite;
+}
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.uploadTitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #e2e8f0;
+  margin-bottom: 0.8rem;
+}
+
+.uploadDescription {
+  color: #94a3b8;
+  margin-bottom: 2.5rem;
+  font-size: 1.05rem;
+}
+
+.fileInput {
+  display: none;
+}
+
+.uploadButton {
+  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+  color: white;
+  border: none;
+  padding: 1rem 2.5rem;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.uploadButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(59, 130, 246, 0.6);
+}
+
+.uploadButton:active {
+  transform: translateY(-1px);
+}
+
+.fileTypes {
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  color: #64748b;
+  font-style: italic;
+}
+
+.generateButton {
+  background: linear-gradient(135deg, #4c669f 0%, #3b5998 100%);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.generateButton:hover {
+  background: linear-gradient(135deg, #3b5998 0%, #4c669f 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.generateButton:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.generateButton:disabled {
+  background: #555;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.questionsSection {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  color: #000000;
+  overflow-y: auto;
+  max-height: calc(100vh - 250px);
+  display: flex;
+  flex-direction: column;
+}
+
+.loadingMessage,
+.noQuestionsMessage,
+.errorMessage {
+  text-align: center;
+  padding: 2rem;
+  color: #888888;
+  font-style: italic;
+  background-color: #f5f5f5;
+  border-radius: 12px;
+}
+
+.errorMessage {
+  color: #d9534f;
+}
+
+.questionList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.questionCard {
+  padding: 1.5rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  background-color: #f9f9f9;
+}
+
+.questionText {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #333333;
+}
+
+.optionsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.optionItem {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eeeeee;
+  color: #555555;
+}
+
+.optionItem:last-child {
+  border-bottom: none;
+}
+
+.footer {
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(96, 165, 250, 0.2);
+  padding: 2rem;
+  text-align: center;
+  color: #e2e8f0;
+  margin-top: auto;
+}
+
+.copyright {
+  font-size: 0.95rem;
+  opacity: 0.8;
+  font-weight: 300;
+}
+
+.companyName {
+  font-weight: 600;
+  color: #a78bfa;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header {
+    padding: 1rem 1.5rem;
+  }
+  .logo {
+    font-size: 1.4rem;
+  }
+  .mainContent {
+    padding: 2rem 1rem;
+  }
+  .pdfSection {
+    padding: 2rem 1.5rem;
+  }
+  .uploadIcon {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+  }
+  .pageTitle {
+    font-size: 2rem;
+  }
+  .username {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+  .headerRight {
+    gap: 1rem;
+  }
+
+  .mainContentGrid {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .questionsSection {
+      max-height: 50vh;
+  }
+}
