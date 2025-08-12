@@ -1,112 +1,151 @@
-🌟 PrepApp: Your Modern Learning & Quiz Platform
-PrepApp is a comprehensive web-based platform designed to transform the way students and learners prepare for exams. It provides a highly engaging and organized environment for knowledge acquisition, featuring interactive quizzes and a robust user management system. PrepApp's core mission is to make learning an efficient and rewarding experience by providing clear feedback and a path to mastery.
+# 🌟 PrepApp — Modern Quiz Platform
 
-✨ Key Features
-Interactive Quizzes: Challenge yourself with a wide range of quizzes on various subjects. Each quiz is designed to test understanding and reinforce key concepts.
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Node.js Version](https://img.shields.io/badge/node-%3E=_18-brightgreen.svg)]()
+[![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)]()
+[![Repo Size](https://img.shields.io/github/repo-size/AmritShan06/PrepApp.svg)](https://github.com/AmritShan06/PrepApp)
 
-Quiz PDF Download: After completing a quiz, you have the option to download the quiz as a PDF for offline review and future study.
+PrepApp is a comprehensive web-based platform designed to transform the way students and learners prepare for exams. It provides a highly engaging and organized environment for knowledge acquisition, featuring interactive quizzes, quiz PDF downloads, and secure authentication. The goal is to make learning efficient, interactive, and rewarding.
 
-Modern & Responsive UI: Experience a clean and intuitive design built with Next.js and React. The application provides a seamless and consistent experience across all devices, from desktops to mobile phones.
+---
 
-Secure Authentication: The application features a robust and secure user authentication system, including user registration and login, powered by Node.js and Express.js.
+## ✨ Key Features
+- **Interactive Quizzes:** Test your knowledge with quizzes across multiple subjects.
+- **Quiz PDF Download:** Export your quiz results as a PDF for offline review.
+- **Modern & Responsive UI:** Built with Next.js and React for seamless experience.
+- **Secure Authentication:** Powered by Node.js, Express.js, JWT, and MongoDB.
+- **AI Integration:** Supports Gemini API for AI-based question generation.
+- **Separation of Concerns:** Independent frontend and backend structure.
 
-🚀 Getting Started
-Follow these steps to set up and run the project locally.
+---
 
-Prerequisites
-Ensure you have the following installed on your machine:
+## 🔧 Prerequisites
+- Node.js v18 or higher
+- npm v8 or higher
+- MongoDB (local or MongoDB Atlas)
 
-Node.js (v18 or higher)
+---
 
-npm (v8 or higher)
+## 📁 Project Structure
+```
+PrepApp/
+├── prep/                  # Frontend (Next.js + React)
+│   ├── public/
+│   ├── src/
+│   │   ├── app/
+│   │   │   ├── login/
+│   │   │   ├── main/
+│   │   │   └── signup/
+│   │   ├── components/
+│   │   └── globals.css
+│   ├── next.config.mjs
+│   └── package.json
+├── server/                # Backend (Node.js + Express)
+│   ├── models/
+│   ├── routes/
+│   ├── controllers/
+│   ├── middleware/
+│   ├── index.js
+│   └── package.json
+├── .gitignore
+└── README.md
+```
 
-A running instance of MongoDB or a connection string from MongoDB Atlas.
+---
 
-Installation & Setup
-Clone the repository to your local machine:
+## 🚀 Getting Started
 
-Bash
-
+### Clone the repository
+```bash
 git clone https://github.com/AmritShan06/PrepApp.git
 cd PrepApp
-Install frontend dependencies:
+```
 
-Bash
-
+### Install frontend dependencies
+```bash
+cd prep
 npm install
-Install backend dependencies:
+```
 
-Bash
-
-cd server
+### Install backend dependencies
+```bash
+cd ../server
 npm install
-cd ..
-Configure your environment variables:
-Create a .env file in the server directory and add the following keys, replacing the placeholders with your actual values:
+```
 
-MONGO_URI=<Your_MongoDB_Connection_String>
-JWT_SECRET=<Your_Strong_Random_Secret_Key>
+### Configure environment variables
+Create `.env` inside `server/`:
+```env
+MONGO_URI="your_mongo_db_url"
+JWT_SECRET="your_strong_jwt_secret"
 GEMINI_API_KEY="your_gemini_api_key_here"
-Running the Application
-Start the backend server in a new terminal:
+PORT=5000
+```
 
-Bash
-
+### Start backend
+```bash
 cd server
 npm start
-Start the frontend development server in another terminal:
+```
 
-Bash
-
+### Start frontend
+```bash
+cd ../prep
 npm run dev
-The application will now be live and accessible at http://localhost:3000.
+```
 
-📁 Project Structure
-The project is structured with a separate frontend and backend for clear separation of concerns.
+Visit the application at:  
+**Frontend:** http://localhost:3000  
+**Backend:** http://localhost:5000
 
-Frontend (prep/ directory)
+---
 
-prep/
-├── .next/
-├── node_modules/
-├── public/
-├── src/
-│   ├── app/
-│   │   ├── login/
-│   │   ├── main/
-│   │   └── signup/
-│   ├── globals.css
-│   ├── layout.js
-│   └── page.js
-├── components/
-├── styles/
-├── .gitignore
-├── next.config.mjs
-├── package.json
-└── README.md
-Backend (server/ directory)
+## 🧭 API Endpoints (Example)
 
-server/
-├── models/
-├── node_modules/
-├── index.js
-├── package-lock.json
-└── package.json
-🤝 Contributing
-Contributions are highly welcome! To contribute to PrepApp, please follow these guidelines:
+**Auth**
+```http
+POST /api/auth/register   # Register new user
+POST /api/auth/login      # Login and receive token
+```
 
-Fork the repository.
+**Quizzes**
+```http
+GET /api/quizzes          # Fetch all quizzes
+POST /api/quizzes         # Create a quiz (admin only)
+```
 
-Create a new branch for your feature or bug fix.
+**Gemini Integration**
+- Requires `GEMINI_API_KEY` in `.env` to enable AI-generated question creation from uploaded PDFs.
 
-Commit your changes with a clear and descriptive message.
+---
 
-Push your changes to your forked repository.
+## 📸 Screenshots
+_Add screenshots in `prep/public/` and update paths:_
+```
+![Home Page](./prep/public/screenshot-home.png)
+![Quiz Page](./prep/public/screenshot-quiz.png)
+```
 
-Create a pull request, detailing the changes you've made.
+---
 
-📄 License
-This project is licensed under the MIT License. See the LICENSE file for more details.
+## 🤝 Contributing
+```bash
+# Fork the repository
+# Create your feature branch
+git checkout -b feature/YourFeature
+# Commit changes
+git commit -m "feat: add YourFeature"
+# Push to branch
+git push origin feature/YourFeature
+# Open a Pull Request
+```
 
-👨‍💻 Author
-Amrit Shan - GitHub Profile
+---
+
+## 📜 License
+This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file.
+
+---
+
+## 👨‍💻 Author
+**Amrit Shan** — [GitHub Profile](https://github.com/AmritShan06)
