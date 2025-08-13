@@ -36,7 +36,7 @@ PrepApp/
 │   │   │   ├── login/
 │   │   │   ├── main/
 │   │   │   └── signup/
-│   │   ├── components/
+│   │   ├── page.js
 │   │   └── globals.css
 │   ├── next.config.mjs
 │   └── package.json
@@ -116,15 +116,6 @@ POST /api/quizzes         # Create a quiz (admin only)
 
 **Gemini Integration**
 - Requires `GEMINI_API_KEY` in `.env` to enable AI-generated question creation from uploaded PDFs.
-
----
-
-## 📸 Screenshots
-_Add screenshots in `prep/public/` and update paths:_
-```
-![Home Page](./prep/public/screenshot-home.png)
-![Quiz Page](./prep/public/screenshot-quiz.png)
-```
 
 ---
 
