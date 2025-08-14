@@ -378,7 +378,6 @@
   text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* This is the key change for the two-column layout */
 .mainContentGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
